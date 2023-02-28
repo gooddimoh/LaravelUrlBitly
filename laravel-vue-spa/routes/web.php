@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\UrlShortenerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +14,5 @@ use App\Http\Controllers\UrlShortenerController;
 */
 
 Route::get('/', function () {
+    return view('welcome');
 });
-
-//Route::post('/urlshortener', UrlShortenerController::class, 'urlshortener');
-
-Route::get('/index', \App\Http\Controllers\FrontendController::class, 'index')->name('index');
-
-
